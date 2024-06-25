@@ -68,4 +68,21 @@ cd workshop-ts
 npm install
 ```
 
+## Test it up
+
+To make sure that everything works fine:
+```bash
+npm run ts
+
+# In your output tou will see something similar to:
+1 [@log] Compilation time
+1 [@log] Compilation time
+2 [@log] Method primeMethodRecurcion was fired
+3 [@log] Arguments passed to primeMethodRecurcion => 10000
+4 [@log] starting execution of primeMethodRecurcion method
+5 [@log] Results 1229
+6 [@log] Method primeMethodRecurcion was completed
+```
+
+
 That's it! You'll now have all the dependencies you need to work through the workshop exercises.
