@@ -1,4 +1,3 @@
-
 /**
 * CRUD Service for CRUD operations against BE / DB
 */
@@ -43,4 +42,3 @@ class CrudService {
     new CrudService()
    );
 
-   
