@@ -1,43 +1,20 @@
-import {timer} from "./decorators/timer";
-import {log} from "./decorators/log";
+const log = console.log;
 
-export class MyClass {
-    @log
-    primeMethodRecurcion(n: number) {
-        const isPrime = (num: number) => {
-            for (let i = 2, sqrtNum = Math.sqrt(num); i <= sqrtNum; i++) {
-                if (num % i === 0) return false;
-            }
-            return num > 1;
-        }
-
-        let primeCount = 0;
-        for (let i = 2; i <= n; i++) {
-            if (isPrime(i)) primeCount++;
-        }
-        return primeCount;
+let apt = {
+    floor: 12,
+    number: '12B',
+    size: 3400,
+    bedRooms: 3.4,
+    bathRooms: 2,
+    Price: 400000,
+    amenities: {
+        airCon: 4,
     }
+};
 
-    @log
-    primeMethodLoop(num: number) {
-        const res = [];
-        for (let i = 2; i <= num; i++) {
-            let flag = 0;
-            for (let j = 2; j < i; j++) {
-                if (i % j == 0) {
-                    flag = 1;
-                    break;
-                }
-            }
 
-            if (i > 1 && flag == 0) {
-                res.push(i);
-            }
-        }
-        return res.length;
-    }
-}
+const descriptor = Object.getOwnPropertyDescriptor(apt, 'floor')
 
-const myCl = new MyClass()
 
-console.log(myCl.primeMethodRecurcion(10000))
+log(descriptor)
+log(apt.floor)
