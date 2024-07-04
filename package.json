@@ -5,13 +5,16 @@
   "main": "index.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
-    "tsinj":"ts-node ./src/injector.ts",
-    "ts":"ts-node ./src/index.ts",
+    "tsinj": "ts-node ./src/injector.ts",
+    "ts": "ts-node ./src/index.ts",
+    "ts:server": "ts-node ./src/server.ts",
     "tsc": "tsc"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "@types/express": "^4.17.21",
+    "express": "^4.19.2",
     "reflect-metadata": "^0.2.2",
     "typescript": "^5.4.5"
   },
