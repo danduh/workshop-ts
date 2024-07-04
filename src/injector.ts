@@ -34,9 +34,6 @@ class CrudService {
     }
    }
 
-
-
-
    const movies = new MoviesService(
     new CommentsService(new CrudService()),
     new CrudService()

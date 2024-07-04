@@ -1,9 +1,22 @@
 
 import { NextFunction, Response, Request } from 'express';
 import postsService from './posts-service';
- 
+import { Get, Param } from './decors';
+import "reflect-metadata"
+
+
+const Controller = (path:string) => {
+  return (target: any) => {
+    Reflect.defineMetadata('basePath', path, target)
+  }
+}
+
+
+@Controller('/posts')
 export class PostsController {
- public static getListOfPosts(
+
+@Get()
+public getListOfPosts(
    req: Request,
    res: Response,
    next: NextFunction
@@ -12,9 +25,13 @@ export class PostsController {
    res.send(data).status(200);
  }
  
- public static getListById(req: Request, res: Response, next: NextFunction) {
-   const postId = parseInt(req.params['postId']);
-   const data = postsService.getPost(postId);
-   res.send(data).status(200);
+ @Get('/:postId')
+ public getListById(@Param('postId') postId: number) {
+    console.log('postId', postId);
+    const data = postsService.getPost(postId);
+    return data;
  }
+
+
 }
+
