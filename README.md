@@ -38,11 +38,11 @@ Hello! My name's [Daniel Ostrovsky](https://x.com/danduh81). This is a workshop 
 
 ## Workshop Plan
 
-We'll be running from 13:15 - 17:30. July 4th Here's the plan:
+We'll be running from 9:00 - ??:??. 
 
-- 13:15-15:15: **First session**
-- 15:15-15:30: **Coffee Break**
-- 15:30-17:30: **Second session**
+- ??:??: **First session**
+- ??:??: **Coffee Break**
+- ??:??: **Second session**
 
 ## System Requirements
 
@@ -74,7 +74,7 @@ To make sure that everything works fine:
 ```bash
 npm run ts
 
-# In your output tou will see something similar to:
+# In your output you will see something similar to:
 1 [@log] Compilation time
 1 [@log] Compilation time
 2 [@log] Method primeMethodRecurcion was fired
