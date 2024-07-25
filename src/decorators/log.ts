@@ -3,7 +3,7 @@ export const log: MethodDecorator = (
     key: string | symbol,
     descriptor: TypedPropertyDescriptor<any>
 ) => {
-    console.log('1 [@log] Compilation time');
+    console.log(key, '1 [@log] Compilation time');
 
     const origin = descriptor.value;
 

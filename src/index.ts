@@ -13,8 +13,16 @@ let apt = {
 };
 
 
+
+// descriptor?.writable = false
+Object.defineProperty(apt, 'floor', {writable: false, configurable:false, enumerable: false})
 const descriptor = Object.getOwnPropertyDescriptor(apt, 'floor')
 
+log(Object.keys(apt))
 
-log(descriptor)
-log(apt.floor)
+// Object.defineProperty(apt, 'floor', {writable: true})
+
+
+
+
+// log(apt.floor)

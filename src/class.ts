@@ -1,8 +1,10 @@
 import {timer} from "./decorators/timer";
 import {log} from "./decorators/log";
+import { cache } from "./decorators/cache";
 
 export class MyClass {
-    @log
+    @cache()
+    @timer()
     primeMethodRecurcion(n: number) {
         const isPrime = (num: number) => {
             for (let i = 2, sqrtNum = Math.sqrt(num); i <= sqrtNum; i++) {
@@ -18,7 +20,7 @@ export class MyClass {
         return primeCount;
     }
 
-    @log
+    // @timer(console.warn)
     primeMethodLoop(num: number) {
         const res = [];
         for (let i = 2; i <= num; i++) {
@@ -40,4 +42,9 @@ export class MyClass {
 
 const myCl = new MyClass()
 
-console.log(myCl.primeMethodRecurcion(10000))
+console.log(myCl.primeMethodRecurcion(100000))
+console.log(myCl.primeMethodRecurcion(200000))
+
+
+console.log(myCl.primeMethodRecurcion(100000))
+// console.log(myCl.primeMethodLoop(10000))
