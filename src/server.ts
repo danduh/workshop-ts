@@ -1,5 +1,5 @@
-import app from './app';
-const port = 3000;
-app.listen(port, () => {
- console.log(`App Started on ${port}`);
-});
+import App from './app';
+import { PostsController } from './controller';
+
+const app = new App(3000, [PostsController]);
+app.listen();
