@@ -11,7 +11,7 @@ export class PostsController {
  }
  
  @Get('/:postId')
- public getListById(@Param('postId') postId: number) {
-   return postsService.getPost(postId);
+ public getListById(@Param('postId') id: number) {
+   return postsService.getPost(id);
  }
 }
